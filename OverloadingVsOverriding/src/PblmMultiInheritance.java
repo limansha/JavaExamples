@@ -14,7 +14,7 @@ public class PblmMultiInheritance {
 	public static void main(String[] args) {
 		//class Abc inherits X and Y classes
 	//	Abc a = new Abc();
-	//	a.model(); //ambigious to pick which model so that's why java doesn't allow multiple inheritance thus can be achieved using Interfaces
+	//	a.model(); //ambigious to pick which model so that's why java doesn't allow multiple inheritance thus can be achieved using abstract classes and Interfaces(we use interfaces as we can only extebd one class where as we can implement more than one interface) 
 	}
 
 }
