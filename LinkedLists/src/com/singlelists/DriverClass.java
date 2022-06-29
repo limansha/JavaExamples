@@ -1,4 +1,4 @@
-package com.lists;
+package com.singlelists;
 
 public class DriverClass {
 
