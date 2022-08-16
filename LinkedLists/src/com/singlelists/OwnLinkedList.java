@@ -17,6 +17,7 @@ public class OwnLinkedList {
 	}
 	Node head;
 	int size;
+	
 	public void insertAtFirst(int value) {
 		Node node = new Node(value);
 		node.next = head;
@@ -81,7 +82,22 @@ public class OwnLinkedList {
 		System.out.print("end");
 		System.out.println();
 	}
+	public void reverseListIterative() {
+		Node prev = null;
+		Node curr = head;
+		Node nxt;
+		while(curr != null) {
+			nxt = curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = nxt;
+		}
+		head = prev;
+		return;
+	}
+	
 	public int getListSize() {
 		return size;
 	}
+	
 }

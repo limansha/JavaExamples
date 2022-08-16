@@ -16,14 +16,16 @@ public class DriverClass {
 		oll.insertAtPos(6,5);
 		System.out.println("size of list "+ oll.getListSize());
 		oll.displayList();
-		System.out.println("deleted element at first "+oll.deleteFirst());
-		System.out.println("size of list "+ oll.getListSize());
+		oll.reverseListIterative();
 		oll.displayList();
-		System.out.println("deleted element at Last "+oll.deleteLast());
-		System.out.println("size of list "+ oll.getListSize());
-		oll.displayList();
-		System.out.println("deleted element at pos 4 : "+oll.deleteAtPos(4));
-		System.out.println("size of list "+ oll.getListSize());
-		oll.displayList();
+//		System.out.println("deleted element at first "+oll.deleteFirst());
+//		System.out.println("size of list "+ oll.getListSize());
+//		oll.displayList();
+//		System.out.println("deleted element at Last "+oll.deleteLast());
+//		System.out.println("size of list "+ oll.getListSize());
+//		oll.displayList();
+//		System.out.println("deleted element at pos 4 : "+oll.deleteAtPos(4));
+//		System.out.println("size of list "+ oll.getListSize());
+//		oll.displayList();
 	}
 }
