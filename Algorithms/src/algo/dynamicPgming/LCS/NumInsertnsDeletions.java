@@ -1,8 +1,6 @@
 package algo.dynamicPgming.LCS;
 
-import java.util.Arrays;
-
-public class NoInsertnsDeletions {
+public class NumInsertnsDeletions {
 
 	public static void main(String[] args) {
 		//Minimum Number of Insertion and Deletion to convert String a to String b
