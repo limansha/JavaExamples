@@ -22,8 +22,6 @@ public class LongestCommonSubSequence {
 		
 		System.out.println(countLcsTabulation(A, B));
 		
-		
-
 	}
 
 	public static int countLcsRecursion(String s1, String s2, int idx1, int idx2) {
