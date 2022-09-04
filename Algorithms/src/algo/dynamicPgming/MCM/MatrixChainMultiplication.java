@@ -3,7 +3,7 @@ package algo.dynamicPgming.MCM;
 import java.util.Arrays;
 
 public class MatrixChainMultiplication {
-	static int arr[] = new int []{40,20,30,10,30};
+	static int arr[] = new int []{40,10,30,5,2,20,30};
 	static int n = arr.length-1;
 	static int[][] t = new int[n+1][n+1];
 	public static void main(String[] args) {
@@ -46,14 +46,16 @@ public class MatrixChainMultiplication {
 		for(int k =i;k<=j-1;k++) {
 //			t[i][k] = solve(arr,i,k);
 //			t[k+1][j] = solve(arr,k+1,j);
-//			int temp = t[i][k] + t[k+1][j] + (arr[i-1] * arr[k]*arr[j]);
+//			t[i][j] = t[i][k] + t[k+1][j] + (arr[i-1] * arr[k]*arr[j]);
 			int temp = solve(arr,i,k) + solve(arr,k+1,j) + (arr[i-1] * arr[k]*arr[j]);
 			if(temp < minValue) {
 				minValue = temp;
 			}
-			t[i][j] = minValue;
+//			if(t[i][j] < minValue) {
+//				minValue = t[i][j];
+//			}
 		}
-		return minValue;
+		return t[i][j] = minValue;
 	}
 }
 
