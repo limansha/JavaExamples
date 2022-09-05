@@ -5,11 +5,11 @@ import java.util.Stack;
 public class DFSIntro {
 
 	public static void main(String[] args) {
-		Node root = new Node(new Node(new Node(new Node(null,"D",null),"C",null),"B",new Node(null,"F",null)),"A",
-				new Node(new Node(new Node(null,"H",null),"G" ,new Node(null,"I",null)),"E",new Node(null,"J",null)));
+		TreeNode root = new TreeNode(new TreeNode(new TreeNode(new TreeNode(null,"D",null),"C",null),"B",new TreeNode(null,"F",null)),"A",
+				new TreeNode(new TreeNode(new TreeNode(null,"H",null),"G" ,new TreeNode(null,"I",null)),"E",new TreeNode(null,"J",null)));
 		printDFS(root);
 	}
-	private static void printDFS(Node root) {
+	private static void printDFS(TreeNode root) {
 		//preorder
 		if(root == null ) {
 			return;
