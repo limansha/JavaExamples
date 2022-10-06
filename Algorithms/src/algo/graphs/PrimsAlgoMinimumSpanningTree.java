@@ -3,6 +3,7 @@ package algo.graphs;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.PriorityQueue;
+import java.util.Stack;
 
 
  class MSTNode {
@@ -22,8 +23,8 @@ import java.util.PriorityQueue;
 	        if (node1.weight < node2.weight) 
 	            return -1; 
 	        if (node1.weight > node2.weight) 
-	            return 1; 
-	        return 0; 
+	            return 1; //swap 
+	        return 0; //no swap
 	    }
 
 }
@@ -62,6 +63,8 @@ public class PrimsAlgoMinimumSpanningTree {
 			primsAlgoBruteForce(n,adj);
 			System.out.println("############################");
 			primsAlgoOptimised(n,adj);
+			
+		
 		
 	}
 
@@ -95,11 +98,6 @@ public class PrimsAlgoMinimumSpanningTree {
 		}
 	}
 
-	public PrimsAlgoMinimumSpanningTree() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
 	private static void primsAlgoBruteForce(int n, ArrayList<ArrayList<MSTNode>> adj) {
 		//initialise inMst array, parent and dist
 		int []parent = new int[n];
@@ -117,7 +115,8 @@ public class PrimsAlgoMinimumSpanningTree {
 			//find the nodeimum value from distance such that that node is explored
 			int nodeValue =Integer.MAX_VALUE;
 			int node =0;
-			for(int v=0;v<n;v++) {
+			for(int v=0;v<n-1;v++) {
+				//nodeValue is used to compare each values and get the minimum out of it in this  v loop
 				if(inMst[v] == false && dist[v] < nodeValue) {
 					nodeValue = dist[v];
 					node = v;
@@ -137,6 +136,7 @@ public class PrimsAlgoMinimumSpanningTree {
 			System.out.println(parent[i]  +" -> "+i);
 		}
 	}
+	
 	
 
 }
