@@ -1,3 +1,4 @@
+//https://www.baeldung.com/java-single-responsibility-principle
 package com.solid.one;
 
 public class TextManipulation {
