@@ -24,8 +24,14 @@ public class FilterEx {
                             .filter(a -> a.getSalary() > 30000)
                             .sorted(Comparator.comparing(Employee::getEmpName))
                             .collect(Collectors.toList());
-        printResult(res2);
-
+      //  printResult(res2);
+       // Filter employees with salary greater than 30,000 and print names in desc
+       List<String> filteredNames = arr.stream()
+       .filter(emp -> emp.getSalary() > 30000)
+       .map(Employee::getEmpName)
+       .sorted(Comparator.reverseOrder())
+       .collect(Collectors.toList());
+       System.out.println(filteredNames);
     }
     
     public static void printResult(List<Employee> arr){
