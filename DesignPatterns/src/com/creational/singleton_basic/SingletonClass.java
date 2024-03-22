@@ -1,4 +1,4 @@
-package com.creational.singleton;
+package com.creational.singleton_basic;
 
 //used for database connection and limited resources accessing 
 public class SingletonClass {

@@ -1,4 +1,4 @@
-package com.creational.singleton;
+package com.creational.singleton_basic;
 
 public class SingletonMain {
 	public static void main(String[] args) {
